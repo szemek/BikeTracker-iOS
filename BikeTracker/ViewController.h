@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 
+- (void)track:(UIButton *)sender;
+
 @end
