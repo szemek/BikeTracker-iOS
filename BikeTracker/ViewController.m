@@ -33,6 +33,13 @@
     NSURL *url = [NSURL URLWithString:@"http://localhost:3000/routes"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
+    NSDictionary *route = @{@"uuid": [[NSUUID UUID] UUIDString], @"locations": @[ @[ @0, @50.0496957, @19.9382471 ] ]};
+    NSLog(@"%@", [route description]);
+    NSError *error = [[NSError alloc] init];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:route options:NSJSONWritingPrettyPrinted error:&error];
+    [request setHTTPBody:data];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             NSLog(@"%@", JSON);
