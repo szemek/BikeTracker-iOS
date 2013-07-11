@@ -26,6 +26,24 @@
     [trackButton setTitle:@"Track" forState:UIControlStateNormal];
     [self.view addSubview:trackButton];
     [trackButton addTarget:self action:@selector(track:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager startUpdatingLocation];
+    self.locationManager.delegate = self;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    // If it's a relatively recent event, turn off updates to save power
+    CLLocation* location = [locations lastObject];
+    NSDate* eventDate = location.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (abs(howRecent) < 15.0) {
+        // If the event is recent, do something with it.
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+              location.coordinate.latitude,
+              location.coordinate.longitude);
+    }
 }
 
 - (void)track:(UIButton *)sender
