@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01420FA9178F2BF60064D957 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01420FA8178F2BF60064D957 /* CoreData.framework */; };
 		01CB23E01780673100CBD178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CB23DF1780673100CBD178 /* UIKit.framework */; };
 		01CB23E21780673100CBD178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CB23E11780673100CBD178 /* Foundation.framework */; };
 		01CB23E41780673100CBD178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CB23E31780673100CBD178 /* CoreGraphics.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01420FA8178F2BF60064D957 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01CB23DC1780673100CBD178 /* BikeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CB23DF1780673100CBD178 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01CB23E11780673100CBD178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01420FA9178F2BF60064D957 /* CoreData.framework in Frameworks */,
 				01CB2422178072A700CBD178 /* CoreLocation.framework in Frameworks */,
 				01CB24201780729F00CBD178 /* MapKit.framework in Frameworks */,
 				01CB23E01780673100CBD178 /* UIKit.framework in Frameworks */,
@@ -90,6 +93,7 @@
 		01CB23D31780673100CBD178 = {
 			isa = PBXGroup;
 			children = (
+				01420FA8178F2BF60064D957 /* CoreData.framework */,
 				01CB240217806CC900CBD178 /* AFNetworking */,
 				01CB23E51780673100CBD178 /* BikeTracker */,
 				01CB23DE1780673100CBD178 /* Frameworks */,
@@ -370,6 +374,7 @@
 				01CB24011780673100CBD178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
